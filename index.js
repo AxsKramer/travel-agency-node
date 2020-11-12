@@ -1,8 +1,13 @@
 const express = require('express');
 const router = require('./routes/index');
+const db = require('./config/db');
 const app = express();
 //Define port
 const port = process.env.PORT || 4000;
+
+db.authenticate()
+  .then(() => console.log('Database connected'))
+  .catch(error => console.log(error));
 
 //Enable pug
 app.set('view engine', 'pug');
