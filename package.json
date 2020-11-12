@@ -1,0 +1,27 @@
+{
+  "name": "travel-agency-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AxsKramer/travel-agency-node.git"
+  },
+  "keywords": [],
+  "author": "Alexander Kramer <kramer.axs1@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AxsKramer/travel-agency-node/issues"
+  },
+  "homepage": "https://github.com/AxsKramer/travel-agency-node#readme",
+  "dependencies": {
+    "express": "4.17.1",
+    "pug": "3.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "2.0.6"
+  }
+}
