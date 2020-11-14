@@ -12,6 +12,7 @@ h1, h2, h3 {
 }
 h1 {
     font-size: 3.4rem;
+    display: block;
 }
 h2 {
     font-size: 2.4rem;
@@ -83,14 +84,15 @@ p {
 }
 header .nav a {
     font-family: 'Staatliches', cursive;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: white;
 }
 footer .nav a,
 .copyright {
     font-family: 'Staatliches', cursive;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     color: black;
+    padding: 0 10px
 }
 .listado-iconos {
     background-color: rgb(245, 245, 245);
@@ -140,6 +142,7 @@ footer .nav a,
 .proximos-viajes p {
     font-size: .9rem;
 }
+
 i {
     color: #DC135F;
     font-size: 2rem;

@@ -15,7 +15,7 @@ app.set('view engine', 'pug');
 //Get current year
 app.use((req,res, next) => {
   //declaration of local variables
-  const year = new Date()
+  const year = new Date();
   //it works on views file just using the name of the variable 
   res.locals.currentYear = year.getFullYear(); 
   next();

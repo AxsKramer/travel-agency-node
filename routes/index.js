@@ -1,30 +1,17 @@
 const express = require('express');
-
 const router = express.Router();
+const {pageHome, pageTestimonials, pageTravels, pageAboutUs, pageTravelDetails } = require('../controllers/pagesController');
 
-router.get('/', (req,res) => {
-  res.render('home', {
-    page: 'Home'
-  })
-});
+//Router and controller
 
-router.get('/travels', (req,res) => {
-  res.render('travels',{
-    page: 'Travels'
-  })
-});
+router.get('/', pageHome);
 
-router.get('/testimonials', (req,res) => {
-  res.render('testimonials', {
-    page: 'Testimonials'
-  })
-});
+router.get('/travels', pageTravels);
 
-router.get('/aboutus', (req,res) => {
-  res.render('aboutus', {
-    page: 'About Us'
-  })
-});
+router.get('/travels/:slug', pageTravelDetails);
 
+router.get('/testimonials', pageTestimonials);
+
+router.get('/aboutus', pageAboutUs);
 
 module.exports = router;
