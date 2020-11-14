@@ -2,5 +2,34 @@ extends ./layout/layout
 
 block content
   main.container.mt-5
-    .row
-      h1 #{page}
+    h1.text-center.mt-5 #{page} 
+      blockquote.text-center Our clients and their experiences
+      .row.testimoniales
+        each testimonial in testimonials
+          .col-md-6.col-lg-4.mb-4
+            .card
+              .card-body 
+                blockquote.blockquote
+                  p.mb-0
+                    | #{testimonial.message}
+                footer.blockquote-footer
+                  | #{testimonial.name}
+      .row
+        .col-md-12
+          h2.d-block.w-100.text-center Add Testimonial
+          if(errors)
+            each error in errors
+              p.alert.alert-danger.text-center.col.py-0 #{error.message}
+        .row.justify-content-center.col
+          .col-md-8
+            form(action="/testimonials" method="POST")
+              .form-group
+                label.text-uppercase.font-weight-bold.text-muted(for="name") Name
+                input#name(type="text", value=name placeholder="Your name", name="name", class="form-control")
+              .form-group
+                label.text-uppercase.font-weight-bold.text-muted(for="email") Email
+                input#email(type="text", value=email placeholder="Your email", name="email", class="form-control")
+              .form-group
+                label.text-uppercase.font-weight-bold.text-muted(for="message") Message
+                textarea#message(name="message", rows="5" class="form-control" placeholder="Your testimony") #{message}
+              input.btn.btn-success.btn-block(type="submit")

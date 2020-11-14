@@ -1,5 +1,5 @@
-
 const { Travel } = require('../models/Travel');
+const { Testimonial } = require('../models/Testimonial');
 
 const pageHome = (req,res) => res.render('home', { page: 'Home' });
 
@@ -28,7 +28,15 @@ const pageTravelDetails = async (req, res) => {
   }
 }
 
-const pageTestimonials = (req,res) => res.render('testimonials', { page: 'Testimonials' });
+const pageTestimonials = async (req,res) => {
+  try{
+    const testimonials = await Testimonial.findAll();
+    res.render('testimonials', { page: 'Testimonials', testimonials });
+  }
+  catch(error){
+    console.log(error);
+  }
+}
 
 const pageAboutUs = (req,res) => res.render('aboutus', { page: 'About Us' });
 

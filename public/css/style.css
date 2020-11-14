@@ -21,6 +21,15 @@ h3 {
     font-size: 3rem;
 }
 
+label{
+    font-size: 1.2rem;
+    text-align: left;
+    display: block;
+    margin-top: 1.2rem;
+    margin-bottom: .5rem;
+    letter-spacing: 2px;
+}
+
 .btn-success {
     background-color: #DC135F;
     border-color: #DC135F;
@@ -74,7 +83,9 @@ h3 {
 blockquote {
     font-weight: bold;
     line-height: 2;
+    font-size: 1rem;
 }
+
 p {
     font-size: 1.2rem;
     line-height: 2;
@@ -88,6 +99,7 @@ header .nav a {
     color: white;
 }
 footer .nav a,
+
 .copyright {
     font-family: 'Staatliches', cursive;
     font-size: 1.2rem;
@@ -149,7 +161,7 @@ i {
 }
 
 .testimoniales p{
-    font-size: .8rem;
+    font-size: 1.2rem;
     font-weight: normal;
 }
 .testimoniales p::before {
@@ -168,4 +180,5 @@ i {
     color: #DC135F;
     font-weight: bold;
     margin-top: 1rem;
+    font-size: .8rem;
 }

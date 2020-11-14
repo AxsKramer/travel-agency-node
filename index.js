@@ -9,6 +9,9 @@ db.authenticate()
   .then(() => console.log('Database connected'))
   .catch(error => console.log(error));
 
+//Add body parder to read data from forms
+app.use(express.urlencoded({extended: true}));
+
 //Enable pug
 app.set('view engine', 'pug');
 
