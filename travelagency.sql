@@ -40,7 +40,7 @@ CREATE TABLE `testimonials` (
 --
 
 INSERT INTO `testimonials` (`id`, `name`, `email`, `message`) VALUES
-(1, 'Alexander', 'kramer.axs1@gmail.com', 'Muy buen viaje a europa'),
+(1, 'Alexander', 'alexander1@gmail.com', 'Muy buen viaje a europa'),
 (2, 'Jose', 'lopez@gmail.com', 'Espero algún día ir al viaje de Grecia.'),
 (3, 'Jaime', 'mskmdkemde@klmlkml', 'felicidades!!!');
 
