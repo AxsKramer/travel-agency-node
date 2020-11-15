@@ -1,7 +1,23 @@
 const { Travel } = require('../models/Travel');
 const { Testimonial } = require('../models/Testimonial');
 
-const pageHome = (req,res) => res.render('home', { page: 'Home' });
+const pageHome = async (req,res) => {
+  //To consult 3 travels of travel model
+  try{
+    const [travels, testimonials] = await Promise.all([Travel.findAll({limit: 3}), Testimonial.findAll({limit: 3})]);
+    console.log(travels)
+    console.log(testimonials)
+    res.render('home', { 
+      page: 'Home', 
+      classHome: 'home',
+      travels,
+      testimonials
+    });
+  }
+  catch(error){
+    console.log(error);
+  }
+}
 
 const pageTravels = async (req,res) => {
   try{
