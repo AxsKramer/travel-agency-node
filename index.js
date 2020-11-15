@@ -2,7 +2,9 @@ const express = require('express');
 const router = require('./routes/index');
 const db = require('./config/db');
 const app = express();
-//Define port
+require('dotenv').config({path: 'variables.env'});
+//Define port and host
+const host = process.env.HOST || '0.0.0.0';
 const port = process.env.PORT || 4000;
 
 db.authenticate()
@@ -30,5 +32,5 @@ app.use('/', router);
 app.use(express.static('public'));
 
 
-app.listen(port, () => console.log(`The server is running on port ${port}`));
+app.listen(port, host, () => console.log(`The server is running on port ${port}`));
 
